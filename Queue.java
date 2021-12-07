@@ -23,12 +23,12 @@ class Queue {
             stack1.push(stack2.pop());
         }
     }
-
     // Removes the element from in front of queue.
+    //time complexity: O(1) memory:o(1)
     public int dequeue() {
-
+        return stack1.pop();
     }
-    
+   
     // Get the front element.
     public int peek() {
 
