@@ -1,7 +1,7 @@
 // Queue with two stacks. Implement a queue with two stacks so that each queue operations takes a
 // constant amortized number of stack operations. Hint: If you push elements onto a stack and then
 // pop them all, they appear in reverse order. If you repeat this process, they're now back in order.
-import java.io.*;
+// import java.io.*;
 import java.util.*;
 
 class Queue {
@@ -43,6 +43,11 @@ class Queue {
     public boolean size() {
         return (stack1.size()+stack2.size()>0)? (true):(false);
     }
+
+    public void display(){
+        for (Integer i : stack1)
+        System.out.println(i);
+    }
     
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -58,6 +63,11 @@ class Queue {
             } else if (input.charAt(0) == '3') {
                 System.out.println(queue.peek());
             } 
+            else if (input.charAt(0) == '4') {
+                queue.display();
+            } 
         }
+        scan.close();
+        
     }
 }
